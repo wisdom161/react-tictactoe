@@ -30,9 +30,10 @@ class App extends Component {
 
     for(let index = 0; index < winLines.length; index += 1) {
       const [a,b,c,] = winLines[index];
+      let board = this.state.board;
       // [a, b, c] = [0, 1, 2] on first iteration
-      // this.state.board[a] === this.state.board[0] === 'X'
-      if (this.state.board[a] && this.state.board[a] === this.state.board[b] && this.state.board[a] === this.state.board[c] ) {
+      // board[a] === this.state.board[0] === 'X'
+      if (board[a] && board[a] === board[b] && board[a] === board[c] ) {
         alert(`You've won!`);
         // set the new state with winner
         this.setState({
@@ -76,14 +77,27 @@ class App extends Component {
     )
   }
 
+  reset() {
+    this.setState({
+      board: Array(9).fill(null),
+      player: null,
+      winner: null
+    })
+  }
+
   render() {
 
     return(
       <div className="container">
         <h1>Tic Tac Toe App</h1>
-        <Status player={this.state.player} setPlayer={(e) =>this.setPlayer(e)}/>
+        <Status 
+        player={this.state.player} 
+        setPlayer={(e) =>this.setPlayer(e)} 
+        winner={this.state.winner}
+        reset={() => this.reset()}
+        />
         <div className="board">
-        {this.renderBoxes()} 
+          {this.renderBoxes()} 
         </div>
       </div>
       
