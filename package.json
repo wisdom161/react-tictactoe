@@ -1,0 +1,43 @@
+{
+  "name": "react-tictactoe",
+  "version": "1.0.0",
+  "description": "React Tic Tac Toe Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisdom161/react-tictactoe.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "Node"
+  ],
+  "author": "Wisdom Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wisdom161/react-tictactoe/issues"
+  },
+  "homepage": "https://github.com/wisdom161/react-tictactoe#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
