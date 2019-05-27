@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './styles/App.css'
-import ChoosePlayer from './components/choosePlayer'
+import './styles/App.css';
+import Status from './components/status';
 
 class App extends Component {
 
@@ -12,7 +12,7 @@ class App extends Component {
       winner: null
     }
     // bind the method to change the state
-    this.handeClick = this.handleClick.bind(this)
+    this.handeClick = this.handleClick.bind(this);
   }
 
   checkWinner() {
@@ -78,14 +78,10 @@ class App extends Component {
 
   render() {
 
-    let status = this.state.player ? 
-    <h2>Next Player Is {this.state.player} </h2> : 
-    <ChoosePlayer setPlayer={(e) => this.setPlayer(e)} />
-    
     return(
       <div className="container">
         <h1>Tic Tac Toe App</h1>
-        {status}
+        <Status player={this.state.player} setPlayer={(e) =>this.setPlayer(e)}/>
         <div className="board">
         {this.renderBoxes()} 
         </div>
