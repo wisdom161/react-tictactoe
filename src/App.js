@@ -77,7 +77,7 @@ class App extends Component {
     )
   }
 
-  reset() {
+  resetGame() {
     this.setState({
       board: Array(9).fill(null),
       player: null,
@@ -94,7 +94,7 @@ class App extends Component {
         player={this.state.player} 
         setPlayer={(e) =>this.setPlayer(e)} 
         winner={this.state.winner}
-        reset={() => this.reset()}
+        resetGame={() => this.resetGame()}
         />
         <div className="board">
           {this.renderBoxes()} 
