@@ -10,6 +10,9 @@ Created a Tic Tac Toe Game with React from the ground up
 
 - Set up React environment
 - Plan the components needed for game
+- Set up ability to choose player
+- Set up game logic
+- Set up reset game after a winner is announced
 - Style it
 
 ## Project Notes:
