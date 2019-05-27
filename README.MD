@@ -17,4 +17,5 @@ Created a Tic Tac Toe Game with React from the ground up
 
 ## Project Notes:
 
-1. Build using React
+1. Built using React
+2. ```npm start``` to begin the game!
