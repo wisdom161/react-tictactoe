@@ -16,6 +16,7 @@ class App extends Component {
   }
 
   checkWinner() {
+    // winning game logic
     let winLines = 
     [
       ["0", "1", "2"],
@@ -36,7 +37,7 @@ class App extends Component {
       if (board[a] && board[a] === board[b] && board[a] === board[c] ) {
         // set the new state with winner; alert the winner in the callback(asynchronously)
         this.setState({winner: this.state.player}, ()=> {
-          alert(`${this.state.winner} has won!`);
+          alert(`Player ${this.state.winner} has won!`);
         })
       }
     }
