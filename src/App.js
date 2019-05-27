@@ -34,10 +34,9 @@ class App extends Component {
       // [a, b, c] = [0, 1, 2] on first iteration
       // board[a] === this.state.board[0] === 'X'
       if (board[a] && board[a] === board[b] && board[a] === board[c] ) {
-        alert(`You've won!`);
-        // set the new state with winner
-        this.setState({
-          winner: this.state.player
+        // set the new state with winner; alert the winner in the callback(asynchronously)
+        this.setState({winner: this.state.player}, ()=> {
+          alert(`${this.state.winner} has won!`);
         })
       }
     }
